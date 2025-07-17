@@ -87,7 +87,7 @@ function fetchUserInfo() {
         .then(userData => {
             return {
                 avatarurl: `${memosHost}${userData.avatarUrl}`,
-                memoname: userData.nickname,
+                memoname: userData.displayName,
                 userurl: `${memosHost}/u/${userData.username}`,
                 description: userData.description,
                 memousername: userData.username
