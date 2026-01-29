@@ -12,7 +12,7 @@ if (typeof memos !== "undefined") {
 
 const limit = memo.limit;
 const memosHost = memo.host.replace(/\/$/, '');
-const memoUrl = `${memosHost}/api/v1/memos?parent=users/${memo.creatorId}&pageSize=${limit}`;
+const memoUrl = `${memosHost}/api/v1/memos?filter=creator_id==${memo.creatorId}&pageSize=${limit}`;
 
 let page = 1;
 let nextPageToken = '';
