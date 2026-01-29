@@ -1,4 +1,7 @@
 # 部署memos.top
+
+由于API频繁改动今后不再适配0.25以后版本
+
 ## 自托管memos
 参照 https://blog.memos.ee/archives/21.html
 ## 部署到vercel
