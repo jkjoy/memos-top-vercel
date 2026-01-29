@@ -246,12 +246,11 @@ themeToggle.addEventListener("click", () => {
 // Darkmode End
 
 // Memos Total Start
-function getTotal() {
-//使用一个无穷大的数字来获取全部memos
+function getTotal() { 
     fetch(`${memosHost}/api/v1/users/${memo.creatorId}:getStats`)
         .then(res => res.json())
         .then(resdata => {
-            if (resdata && resdata.memos) {
+            if (resdata && typeof resdata.totalMemoCount === 'number') {
                 var memosCount = document.getElementById('total');
                 if (memosCount) {
                     memosCount.innerHTML = resdata.totalMemoCount;
